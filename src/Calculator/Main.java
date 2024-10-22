@@ -6,10 +6,26 @@
 
 package Calculator;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        //test run
+        ConstantTerm constantTerm = new ConstantTerm(5);
+        LinearTerm linearTerm = new LinearTerm(7);
+        PolynomialTerm polynomialTerm = new PolynomialTerm(4, 3);
+        ITerm linearDerivative = linearTerm.derivative();
+        ITerm polynomialDerivative = polynomialTerm.derivative();
+
+
+        System.out.println("Constant term evaluated at x = 4: " + constantTerm.evaluate(4));
+        System.out.println("Constant term toString: " + constantTerm);
+
+        System.out.println("Linear term evaluated at x = 4: " + linearTerm.evaluate(4));
+        System.out.println("Linear term toString: " + linearTerm);
+        System.out.println("Linear Term derivative: " + linearDerivative);
+
+        System.out.println("Polynomial term evaluated at x = 4: " + polynomialTerm.evaluate(4));
+        System.out.println("Polynomial term toString: " + polynomialTerm);
+        System.out.println("Polynomial Term derivative: " + polynomialDerivative);
 
         }
     }
