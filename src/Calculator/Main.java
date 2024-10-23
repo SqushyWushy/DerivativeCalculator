@@ -14,6 +14,8 @@ public class Main {
         PolynomialTerm polynomialTerm = new PolynomialTerm(4, 3);
         ITerm linearDerivative = linearTerm.derivative();
         ITerm polynomialDerivative = polynomialTerm.derivative();
+        TrigTerm trigTerm = new TrigTerm(4, TrigType.SINE);
+        ITerm trigDerivative = trigTerm.derivative();
 
 
         System.out.println("Constant term evaluated at x = 4: " + constantTerm.evaluate(4));
@@ -26,6 +28,10 @@ public class Main {
         System.out.println("Polynomial term evaluated at x = 4: " + polynomialTerm.evaluate(4));
         System.out.println("Polynomial term toString: " + polynomialTerm);
         System.out.println("Polynomial Term derivative: " + polynomialDerivative);
+
+        System.out.println("Trig term evaluated at x = 4: " + trigTerm.evaluate(4));
+        System.out.println("Trig term toString: " + trigTerm);
+        System.out.println("Trig Term derivative: " + trigDerivative);
 
         }
     }
