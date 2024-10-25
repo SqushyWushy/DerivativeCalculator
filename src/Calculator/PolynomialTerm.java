@@ -8,8 +8,8 @@
 package Calculator;
 
 public class PolynomialTerm implements ITerm {
-    private int a; //this will be our coefficient term
-    private int b; //this will be our exponent term
+    private final int a; //this will be our coefficient term
+    private final int b; //this will be our exponent term
 
     public PolynomialTerm(int a, int b){
         this.a = a;
@@ -41,5 +41,9 @@ public class PolynomialTerm implements ITerm {
         int absA = Math.abs(a);
         String coeff = (absA == 1) ? "" : Integer.toString(absA);
         return sign + coeff + "x^" + b;
+    }
+
+    public int getExponent(){
+        return b;
     }
 }

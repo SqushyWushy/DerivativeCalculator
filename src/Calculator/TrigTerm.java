@@ -7,8 +7,8 @@
 package Calculator;
 
 public class TrigTerm implements ITerm {
-    private int a; //for our coefficient
-    private TrigType type; // either sine or cosine
+    private final int a; //for our coefficient
+    private final TrigType type; // either sine or cosine
 
     public TrigTerm(int a, TrigType type){
         this.a = a; //coefficient
@@ -50,5 +50,9 @@ public class TrigTerm implements ITerm {
         String coeff = (absA == 1) ? "" : Integer.toString(absA);
         String function = (type == TrigType.SINE) ? "sin(x) " : "cos(x) ";
         return sign + coeff + function;
+    }
+
+    public TrigType getType(){
+        return type;
     }
 }
